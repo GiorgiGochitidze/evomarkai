@@ -1,0 +1,21 @@
+.main-sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--sidebar-bg);
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  width: calc(100% - 260px);
+  min-height: calc(100vh - 50px);
+  max-height: calc(100vh - 50px);
+  margin-left: 260px;
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}

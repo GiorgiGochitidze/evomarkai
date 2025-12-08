@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
+import Navbar from "@/components/Navbar/Navbar";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
-  title: "EvoMarkAI - Home",
-  description: "EvoMarkAI - Home",
+  title: "EvoMarkAI",
+  description:
+    "EvoMarkAI - Your AI to improve marketing and content generation",
 };
 
 export default function RootLayout({
@@ -14,6 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Navbar />
+        <Sidebar />
         {children}
       </body>
     </html>
