@@ -15,7 +15,8 @@ main {
   max-height: calc(100vh - 50px);
   margin-left: 260px;
   margin-top: 50px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-inline: 50px;
   display: flex;
   flex-direction: column;
 }
