@@ -20,6 +20,8 @@ export default function Home() {
   const sendMessage = async () => {
     if (!input.trim()) return;
 
+    setLoading(true);
+
     const userMessage: { sender: "user"; text: string } = {
       sender: "user",
       text: input,
@@ -64,6 +66,7 @@ export default function Home() {
         setInput={setInput}
         handleKeyPress={handleKeyPress}
         sendMessage={sendMessage}
+        loading={loading}
       />
     </main>
   );

@@ -1,11 +1,13 @@
 import { FaArrowUp } from "react-icons/fa";
 import "./CSS/input.css";
+import { IoIosSquare } from "react-icons/io";
 
 interface InputProps {
   input: string;
   setInput: (value: string) => void;
   handleKeyPress: (e: React.KeyboardEvent) => void;
   sendMessage: () => void;
+  loading: boolean;
 }
 
 const Input = ({
@@ -13,12 +15,16 @@ const Input = ({
   setInput,
   handleKeyPress,
   sendMessage,
+  loading,
 }: InputProps) => {
   return (
     <div className="input-container">
       <label htmlFor="chat-input">
         <div onClick={sendMessage} className="arrowup-container">
-          <FaArrowUp style={{ marginLeft: "0px" }} size={15} fill="black" />
+          {!loading && (
+            <FaArrowUp style={{ marginLeft: "0px" }} size={15} fill="black" />
+          )}
+          {loading && <IoIosSquare size={15} />}
         </div>
         <input
           type="text"
