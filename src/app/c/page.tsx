@@ -32,7 +32,7 @@ export default function Home() {
 
     try {
       const res = await axios.post<AIResponse[]>(
-        "http://localhost:3001/sendMsg",
+        "https://evomarkai-backend.onrender.com/sendMsg",
         {
           message: input,
         }
