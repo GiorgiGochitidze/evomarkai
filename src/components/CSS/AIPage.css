@@ -20,3 +20,20 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 800px) {
+  .main-sidebar{
+    display: none;
+  }
+
+  main{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main{
+    padding-inline: 20px;
+  }
+}

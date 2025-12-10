@@ -8,6 +8,7 @@ interface InputProps {
   handleKeyPress: (e: React.KeyboardEvent) => void;
   sendMessage: () => void;
   loading: boolean;
+  stopMessage: () => void;
 }
 
 const Input = ({
@@ -16,11 +17,15 @@ const Input = ({
   handleKeyPress,
   sendMessage,
   loading,
+  stopMessage,
 }: InputProps) => {
   return (
     <div className="input-container">
       <label htmlFor="chat-input">
-        <div onClick={sendMessage} className="arrowup-container">
+        <div
+          onClick={loading ? stopMessage : sendMessage}
+          className="arrowup-container"
+        >
           {!loading && (
             <FaArrowUp style={{ marginLeft: "0px" }} size={15} fill="black" />
           )}
