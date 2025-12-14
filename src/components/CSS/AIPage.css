@@ -19,21 +19,26 @@ main {
   padding-inline: 50px;
   display: flex;
   flex-direction: column;
+  background-color: var(--background);
+}
+
+body{
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
-  .main-sidebar{
+  .main-sidebar {
     display: none;
   }
 
-  main{
+  main {
     width: 100%;
     margin-left: 0;
   }
 }
 
 @media screen and (max-width: 800px) {
-  main{
+  main {
     padding-inline: 20px;
   }
 }
