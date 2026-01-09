@@ -16,12 +16,10 @@ export default function CLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <Sidebar />
-        {children}
-      </body>
-    </html>
+    <div className="c-layout">
+      <Navbar />
+      <Sidebar />
+      {children}
+    </div>
   );
 }

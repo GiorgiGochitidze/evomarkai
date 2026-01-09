@@ -20,7 +20,7 @@ const Form = ({ url, authFunction }: AuthFormTypes) => {
   ): Promise<void> => {
     e.preventDefault();
 
-    await authFunction({ email, password });
+    await authFunction({ userName, email, password });
   };
 
   return (
@@ -67,10 +67,7 @@ const Form = ({ url, authFunction }: AuthFormTypes) => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <button
-          onClick={() => authFunction({ email, password })}
-          className="auth-button"
-        >
+        <button type="submit" className="auth-button">
           {url === "/signIn" ? "Sign In" : "Sign Up"}
         </button>
         {url === "/signIn" ? (

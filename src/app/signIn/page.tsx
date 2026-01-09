@@ -2,9 +2,10 @@
 
 import Form from "@/components/Auth/Form";
 import axios from "axios";
-import { usePathname } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 
 export interface authProps {
+  userName?: string;
   email: string;
   password: string;
 }
@@ -18,12 +19,16 @@ const SignIn = () => {
     }
 
     const res = await axios.post(
-      "http://localhost:3001/signIn",
+      "http://localhost:3001/signin",
       { email, password },
       { withCredentials: true }
     );
 
     console.log(res.data);
+
+    setTimeout(() => {
+      redirect("/c");
+    }, 1500);
   };
   return (
     <>
