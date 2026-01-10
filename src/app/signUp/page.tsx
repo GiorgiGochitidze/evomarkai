@@ -14,7 +14,7 @@ const SignIn = () => {
     }
 
     const res = await axios.post(
-      "http://localhost:3001/signup",
+      "https://evomarkai-backend.onrender.com/signup",
       { userName, email, password },
       { withCredentials: true }
     );

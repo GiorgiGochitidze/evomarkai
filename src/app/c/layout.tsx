@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Sidebar from "@/components/Sidebar";
-// 4-2
 
 export const metadata: Metadata = {
   title: "EvoMarkAI",

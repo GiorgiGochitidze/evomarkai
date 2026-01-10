@@ -33,7 +33,7 @@ export default function Home() {
 
     try {
       const res = await axios.post<AIResponse>(
-        "http://localhost:3001/sendMsg",
+        "https://evomarkai-backend.onrender.com/sendMsg",
         { message: input }
       );
 
@@ -60,7 +60,7 @@ export default function Home() {
     if (!currentExecutionId) return;
 
     try {
-      const res = await axios.post("http://localhost:3001/stopExecution", {
+      const res = await axios.post("https://evomarkai-backend.onrender.com/stopExecution", {
         executionId: currentExecutionId,
       });
 

@@ -1,27 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import "./CSS/MainNavbar.css";
 import { LinkStyles } from "@/components/LinkStyles";
-import { useEffect } from "react";
-import axios from "axios";
 
 const MainNavbar = () => {
-  useEffect(() => {
-    const loadUser = async () => {
-      try {
-        const res = await axios.get("http://localhost:3001/me", {
-          withCredentials: true,
-        });
-        console.log(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    loadUser();
-  }, []);
-
   return (
     <header>
       <nav>
